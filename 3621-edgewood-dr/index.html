@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Open house walkthrough and sign-in for 3621 Edgewood Dr, Garland TX. Hosted by Destin Weakley, Real Broker, LLC.">
+<meta property="og:title" content="3621 Edgewood Dr | Open House">
+<meta property="og:description" content="Photo walkthrough, listing details and sign-in. Hosted by Destin Weakley, Real Broker, LLC.">
+<meta property="og:image" content="https://destinweakleysells.github.io/open-houses/3621-edgewood-dr/img/front.jpg">
+<meta property="og:url" content="https://destinweakleysells.github.io/open-houses/3621-edgewood-dr/">
+<meta name="color-scheme" content="light dark">
+<title>3621 Edgewood Dr</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
+<style>
+/* Layout: full-bleed twilight hero, sticky section nav, room-by-room photo walkthrough, cobalt sign-in block at the foot. Brand: Cobalt, Chalk, Seaglass, Coral, Legacy Blue. */
+:root {
+  --bg: #ffffff;
+  --surface: #eef5f4;
+  --ink: #050e3d;
+  --muted: #615b56;
+  --line: #d3e3e1;
+  --accent: #ff557e;
+  --accent-ink: #050e3d;
+  --link: #050e3d;
+  --signin-bg: #050e3d;
+  --signin-ink: #ffffff;
+  --signin-muted: #bfdddb;
+  --scrim-top: rgba(5,14,61,0);
+  --scrim-mid: rgba(5,14,61,.4);
+  --scrim-bottom: rgba(5,14,61,.94);
+  --hero-ink: #ffffff;
+  --seaglass: #bfdddb;
+  --blue: #05c3f9;
+  --font-display: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #050e3d; --surface: #0b1750; --ink: #ffffff; --muted: #bfdddb; --line: #1f2d6e;
+    --link: #05c3f9; --signin-bg: #0f1e66; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #050e3d; --surface: #0b1750; --ink: #ffffff; --muted: #bfdddb; --line: #1f2d6e;
+  --link: #05c3f9; --signin-bg: #0f1e66; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.12; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: var(--link); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: 20px; }
+.label { font-family: var(--font-display); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+/* hero */
+.hero { position: relative; display: grid; align-items: end; min-height: clamp(440px, 72vw, 660px); background: var(--signin-bg); color: var(--hero-ink); overflow: hidden; }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--scrim-bottom), var(--scrim-mid) 52%, var(--scrim-top)); }
+.hero .wrap { position: relative; z-index: 1; padding-block: 28px 32px; display: grid; gap: 10px; }
+.hero .label { color: var(--seaglass); }
+.hero h1 { font-size: clamp(32px, 7vw, 60px); font-weight: 700; letter-spacing: -.01em; }
+.hero .where { font-size: clamp(16px, 2.6vw, 19px); color: #ffffff; max-width: 40rem; }
+.hero .price { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 5vw, 38px); }
+.facts { background: var(--surface); border-bottom: 1px solid var(--line); }
+.facts ul { list-style: none; margin: 0; padding: 18px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 14px 12px; }
+.facts li { display: grid; gap: 2px; min-width: 0; }
+.facts strong { font-family: var(--font-display); font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.facts span { font-size: 13px; color: var(--muted); }
+
+/* nav */
+nav.sections { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+nav.sections .wrap { display: flex; gap: 6px; overflow-x: auto; padding-block: 10px; scrollbar-width: none; }
+nav.sections .wrap::-webkit-scrollbar { display: none; }
+nav.sections a { flex: 0 0 auto; text-decoration: none; font-size: 14px; font-weight: 500; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: var(--bg); }
+nav.sections a.go { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+
+/* sections */
+section { padding-block: 56px 8px; scroll-margin-top: 64px; }
+.intro { display: grid; gap: 28px; grid-template-columns: 1fr; }
+@media (min-width: 820px) { .intro { grid-template-columns: 1.1fr 1fr; gap: 48px; } }
+.sec-head { display: grid; gap: 10px; margin-bottom: 22px; max-width: 46rem; }
+.sec-head h2 { font-size: clamp(26px, 4.4vw, 38px); font-weight: 600; }
+.sec-head p { color: var(--muted); }
+.features { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.features li { padding: 12px 0; border-top: 1px solid var(--line); }
+.features li:last-child { border-bottom: 1px solid var(--line); }
+.features b { font-weight: 600; }
+
+.stop { margin-bottom: 52px; }
+.photos { display: grid; gap: 10px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .photos.two { grid-template-columns: 1fr 1fr; } .photos.three { grid-template-columns: 1fr 1fr; } .photos.three figure:first-child { grid-column: 1 / -1; } }
+figure { margin: 0; min-width: 0; }
+figure img { display: block; width: 100%; height: auto; border-radius: 4px; background: var(--surface); }
+figcaption { font-size: 13px; color: var(--muted); padding-top: 6px; }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 22px; }
+.split { display: grid; gap: 24px; grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 820px) { .split { grid-template-columns: 1.3fr 1fr; gap: 40px; } }
+.split.flip { }
+dl.spec { margin: 0; display: grid; grid-template-columns: minmax(110px, 38%) 1fr; }
+dl.spec dt, dl.spec dd { margin: 0; padding: 11px 0; border-top: 1px solid var(--line); }
+dl.spec dt { color: var(--muted); font-size: 14px; }
+dl.spec dd { font-weight: 500; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+dl.spec dt:last-of-type, dl.spec dd:last-of-type { border-bottom: 1px solid var(--line); }
+
+/* host */
+.host { display: grid; gap: 24px; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 720px) { .host { grid-template-columns: 220px 1fr; gap: 36px; } }
+.host img.me { width: 100%; max-width: 220px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border-radius: 4px; }
+.host h3 { font-size: 28px; font-weight: 600; }
+.host .tag { color: var(--muted); margin-top: 4px; }
+.contact { display: grid; gap: 4px; margin-top: 14px; font-variant-numeric: tabular-nums; }
+.contact span { color: var(--muted); font-size: 13px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 18px; }
+.stats div { display: grid; }
+.stats strong { font-family: var(--font-display); font-size: 22px; font-weight: 600; }
+.stats span { font-size: 13px; color: var(--muted); }
+
+/* sign in */
+.signin { margin-top: 56px; background: var(--signin-bg); color: var(--signin-ink); padding-block: 56px 60px; scroll-margin-top: 0; }
+.signin .wrap { display: grid; gap: 18px; max-width: 760px; }
+.signin h2 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; }
+.signin p { color: var(--signin-muted); }
+.signin .btn { justify-self: start; display: inline-block; text-decoration: none; font-family: var(--font-display); font-weight: 600; font-size: 18px; padding: 16px 28px; background: var(--accent); color: var(--accent-ink); border-radius: 4px; }
+.signin .url { font-size: 13px; color: var(--signin-muted); overflow-wrap: anywhere; user-select: all; }
+.signin .fields { display: flex; flex-wrap: wrap; gap: 8px; }
+.signin .fields span { border: 1px solid var(--signin-muted); border-radius: 999px; padding: 4px 14px; font-size: 14px; color: var(--signin-ink); }
+.signin img.logo { width: 120px; height: auto; margin-top: 18px; opacity: .95; }
+footer { padding-block: 28px 96px; font-size: 12.5px; color: var(--muted); }
+footer .wrap { display: grid; gap: 8px; }
+
+/* floating jump button */
+.jump { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 6; text-decoration: none; font-family: var(--font-display); font-weight: 600; font-size: 15px; background: var(--accent); color: var(--accent-ink); padding: 12px 20px; border-radius: 999px; box-shadow: 0 6px 18px rgba(5,14,61,.35); }
+
+.signin form { display: grid; gap: 14px; max-width: 460px; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: 14px; font-weight: 600; color: var(--signin-ink); }
+.field input { width: 100%; font: inherit; font-size: 16px; padding: 14px 14px; border-radius: 4px; border: 2px solid var(--signin-muted); background: #ffffff; color: #050e3d; }
+.field input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-color: var(--accent); }
+.field input[aria-invalid="true"] { border-color: var(--accent); }
+.signin button.btn { justify-self: start; border: 0; cursor: pointer; font-family: var(--font-display); }
+.signin button.btn[disabled] { opacity: .6; cursor: default; }
+.signin .msg { min-height: 1.4em; color: var(--accent); font-weight: 500; }
+.signin .url a { color: var(--signin-ink); }
+.thanks { background: rgba(255,255,255,.08); border: 1px solid var(--signin-muted); border-radius: 4px; padding: 22px; max-width: 460px; display: grid; gap: 8px; }
+.thanks h3 { font-size: 22px; font-weight: 600; }
+.thanks p { color: var(--signin-ink); }
+</style>
+<style>html{-webkit-text-size-adjust:100%}body{margin:0;padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<header class="hero" id="top">
+  <img src="img/front.jpg" alt="Front of 3621 Edgewood Dr, a white single-story home with an attached one-car garage and green lawn" width="1400" height="933">
+  <div class="wrap">
+    <p class="label">Open house &middot; Sunday, Oct 4 &middot; 3:00 to 5:00 PM</p>
+    <h1>3621 Edgewood Dr</h1>
+    <p class="where">Garland, TX 75042. A renovated single-story home in Garland ISD with a fully fenced backyard.</p>
+    <p class="price">$295,000</p>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="wrap">
+    <ul>
+      <li><strong>3</strong><span>Bedrooms</span></li>
+      <li><strong>2</strong><span>Full baths</span></li>
+      <li><strong>1,312</strong><span>Sq ft</span></li>
+      <li><strong>0.16</strong><span>Acres</span></li>
+      <li><strong>1966</strong><span>Year built</span></li>
+    </ul>
+  </div>
+</div>
+
+<nav class="sections" aria-label="Page sections">
+  <div class="wrap">
+    <a href="#home">The home</a>
+    <a href="#walkthrough">Walkthrough</a>
+    <a href="#yard">Yard</a>
+    <a href="#area">Area</a>
+    <a href="#details">Details</a>
+    <a href="#host">Your host</a>
+    <a class="go" href="#signin">Sign in</a>
+  </div>
+</nav>
+
+<main>
+<section id="home">
+  <div class="wrap intro">
+    <div class="sec-head" style="margin:0">
+      <p class="label">Welcome</p>
+      <h2>Renovated, single story, move-in ready</h2>
+      <p>Three bedrooms and two updated baths around an open kitchen and living area. Use this page as you walk through. Each stop below matches a room you will see today.</p>
+    </div>
+    <ul class="features">
+      <li><b>3 bedrooms, 2 full baths,</b> 1,312 sq ft on one level</li>
+      <li><b>Updated kitchen</b> with granite counters, a peninsula with bar seating, white shaker cabinets and matte black hardware</li>
+      <li><b>Luxury vinyl plank flooring</b> in the main living areas, with a vaulted, beam-accented ceiling</li>
+      <li><b>Updated baths</b> with designer tile</li>
+      <li><b>Freshly shampooed carpet</b> in the bedrooms</li>
+      <li><b>2016 AC unit</b> and ceiling fans</li>
+      <li><b>Fully fenced backyard</b> with mature trees and an attached one-car garage</li>
+    </ul>
+  </div>
+</section>
+
+<section id="walkthrough">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Photo walkthrough</p>
+      <h2>Room by room</h2>
+      <p>Photos are from the listing. Furnishings are staging and are not included unless stated in the contract.</p>
+    </div>
+
+    <div class="stop">
+      <div class="sec-head"><p class="label">Stop 1 &middot; Arrival</p><h3>Attached garage and a level front yard</h3><p>A single-story home with an attached one-car garage and a driveway from the street.</p></div>
+      <div class="photos two">
+        <figure><img src="img/front_b.jpg" alt="Angled front view of the home showing the garage, entry and front lawn" width="1400" height="933" loading="lazy"><figcaption>Front of the home</figcaption></figure>
+        <figure><img src="img/front.jpg" alt="Straight-on front view of the home with the garage at left" width="1400" height="933" loading="lazy"><figcaption>Garage and driveway</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="stop">
+      <div class="sec-head"><p class="label">Stop 2 &middot; Living room</p><h3>Open living area with vinyl plank floors</h3><p>The living room opens to the kitchen. Recessed lighting, ceiling fans and a large front window keep it bright.</p></div>
+      <div class="photos three">
+        <figure><img src="img/living_c.jpg" alt="Living room with sectional sofa, ceiling fan and recessed lighting" width="1400" height="933" loading="lazy"><figcaption>Living room</figcaption></figure>
+        <figure><img src="img/living_a.jpg" alt="Living room with front window and entry door" width="1400" height="933" loading="lazy"><figcaption>Front window and entry</figcaption></figure>
+        <figure><img src="img/living_b.jpg" alt="Living room looking toward the entry door and closet" width="1400" height="933" loading="lazy"><figcaption>Entry and closet</figcaption></figure>
+        <figure><img src="img/living_d.jpg" alt="Long view from the kitchen back toward the living room" width="1400" height="933" loading="lazy"><figcaption>View from the kitchen</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="stop">
+      <div class="sec-head"><p class="label">Stop 3 &middot; Kitchen</p><h3>Granite, white shaker cabinets, bar seating</h3><p>A peninsula with bar seating anchors the kitchen. Matte black hardware, stainless appliances and a glass and steel range hood sit under a vaulted, beam-accented ceiling.</p></div>
+      <div class="photos three">
+        <figure><img src="img/kitchen_a.jpg" alt="Kitchen peninsula with granite top, two bar stools and range hood" width="1400" height="933" loading="lazy"><figcaption>Peninsula with bar seating</figcaption></figure>
+        <figure><img src="img/kitchen_b.jpg" alt="Kitchen and dining space under a vaulted ceiling with ceiling fan" width="1400" height="933" loading="lazy"><figcaption>Kitchen under the vaulted ceiling</figcaption></figure>
+        <figure><img src="img/kitchen_c.jpg" alt="Kitchen with granite counters, double sink, dishwasher and electric range" width="1400" height="933" loading="lazy"><figcaption>Sink, dishwasher and range</figcaption></figure>
+        <figure><img src="img/kitchen_d.jpg" alt="Galley side of the kitchen with white cabinets and stainless dishwasher" width="1400" height="933" loading="lazy"><figcaption>Cabinets and counters</figcaption></figure>
+        <figure><img src="img/kitchen_e.jpg" alt="Kitchen range and granite counters with a window above" width="1400" height="933" loading="lazy"><figcaption>Range and granite</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="stop">
+      <div class="sec-head"><p class="label">Stop 4 &middot; Bedrooms</p><h3>Three bedrooms with fresh carpet</h3><p>Each bedroom has a ceiling fan and closet. One has a door to an adjoining bath.</p></div>
+      <div class="photos two">
+        <figure><img src="img/bed_a.jpg" alt="Bedroom with white bedding, closet and a door open to a bath" width="1400" height="933" loading="lazy"><figcaption>Bedroom with adjoining bath</figcaption></figure>
+        <figure><img src="img/bed_d.jpg" alt="Bedroom with a large double-door closet and ceiling fan" width="1400" height="933" loading="lazy"><figcaption>Bedroom with double-door closet</figcaption></figure>
+        <figure><img src="img/bed_b.jpg" alt="Bedroom with a window, ceiling fan and gray carpet" width="1400" height="933" loading="lazy"><figcaption>Bedroom</figcaption></figure>
+        <figure><img src="img/bed_c.jpg" alt="Bedroom with two windows and ceiling fan" width="1400" height="933" loading="lazy"><figcaption>Bedroom</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="stop">
+      <div class="sec-head"><p class="label">Stop 5 &middot; Baths</p><h3>Updated baths with designer tile</h3><p>Round mirrors, a tiled tub-shower with an accent niche and patterned tile floors.</p></div>
+      <div class="photos two">
+        <figure><img src="img/bath_a.jpg" alt="Bath with round mirror, white vanity and tiled tub-shower" width="1400" height="933" loading="lazy"><figcaption>Vanity and tub-shower</figcaption></figure>
+        <figure><img src="img/bath_b.jpg" alt="Bath with tiled shower, accent niche and patterned tile floor" width="1400" height="933" loading="lazy"><figcaption>Tile shower and niche</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="yard">
+  <div class="wrap">
+    <div class="sec-head"><p class="label">Backyard</p><h2>Fully fenced, with mature trees</h2><p>A wood privacy fence surrounds an open lawn behind the home.</p></div>
+    <div class="photos"><figure><img src="img/backyard.jpg" alt="Fenced backyard with open lawn and mature trees, with the back of the home in the distance" width="1400" height="933" loading="lazy"></figure></div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap split">
+    <div>
+      <div class="sec-head"><p class="label">Area</p><h2>Garland ISD, with highway access</h2><p>The home is in Garland, TX 75042, with access to I-635, Highway 75 and the President George Bush Turnpike. Verify school assignment with the district before relying on it.</p></div>
+    </div>
+    <div class="panel">
+      <dl class="spec">
+        <dt>Elementary</dt><dd>Bullock Elementary, 0.3 mi</dd>
+        <dt>Middle</dt><dd>Jackson Technology Center, 0.9 mi</dd>
+        <dt>High school</dt><dd>North Garland High School, 2.0 mi</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="details">
+  <div class="wrap split">
+    <div>
+      <div class="sec-head"><p class="label">Listing details</p><h2>At a glance</h2></div>
+      <div class="panel">
+        <dl class="spec">
+          <dt>List price</dt><dd>$295,000</dd>
+          <dt>Status</dt><dd>Active</dd>
+          <dt>Type</dt><dd>Single family, 1 story</dd>
+          <dt>Year built</dt><dd>1966</dd>
+          <dt>Living area</dt><dd>1,312 sq ft</dd>
+          <dt>Bedrooms</dt><dd>3</dd>
+          <dt>Baths</dt><dd>2 full</dd>
+          <dt>Lot</dt><dd>0.16 acres, fully fenced</dd>
+          <dt>Garage</dt><dd>1-car, attached</dd>
+          <dt>Flooring</dt><dd>Luxury vinyl plank, carpet, tile</dd>
+          <dt>Cooling and heat</dt><dd>Central, 2016 AC unit</dd>
+          <dt>Roof</dt><dd>Composition</dd>
+          <dt>Water heater</dt><dd>Gas</dd>
+          <dt>Appliances</dt><dd>Dishwasher, disposal, microwave, electric cooktop and oven</dd>
+          <dt>HOA</dt><dd>None</dd>
+          <dt>Property tax</dt><dd>About $7,086 per year per listing data. Verify with the county.</dd>
+          <dt>MLS #</dt><dd>21326315</dd>
+          <dt>Listing agent</dt><dd>Destin Weakley, Real Broker, LLC</dd>
+        </dl>
+      </div>
+    </div>
+    <div>
+      <div class="sec-head"><p class="label">Questions today</p><h2>Ask your host</h2><p>Destin is here until 5:00 PM. Ask about financing, taxes, the updates, the neighborhood or how this home compares with others nearby.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="host">
+  <div class="wrap">
+    <div class="panel host">
+      <img class="me" src="img/headshot.jpg" alt="Destin Weakley, REALTOR" width="700" height="875" loading="lazy">
+      <div>
+        <p class="label">Hosted by</p>
+        <h3>Destin Weakley</h3>
+        <p class="tag">REALTOR&reg; with Real Broker, LLC &middot; License #792260<br>Your Home. Your Future. Your Agent.</p>
+        <div class="contact">
+          <span>Phone</span><a href="tel:9035639700">903-563-9700</a>
+          <span>Email</span><a href="mailto:destinsellsdfwhomes@gmail.com">destinsellsdfwhomes@gmail.com</a>
+          <span>Web</span><a href="https://destinweakleysells.com">destinweakleysells.com</a>
+        </div>
+        <div class="stats">
+          <div><strong>100+</strong><span>Clients served</span></div>
+          <div><strong>10+</strong><span>Counties</span></div>
+          <div><strong>5.0</strong><span>Google rating</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="signin" id="signin">
+  <div class="wrap">
+    <p class="label" style="color:var(--signin-muted)">Open house sign-in</p>
+    <h2>Sign in before you go</h2>
+    <p>Three quick fields. Your details go to Destin Weakley, who is hosting today.</p>
+    <form id="signform" novalidate>
+      <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" required></div>
+      <div class="field"><label for="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+      <button class="btn" type="submit" id="f-submit">Sign in</button>
+      <p class="msg" id="f-msg" role="status" aria-live="polite"></p>
+    </form>
+    <div id="thanks" class="thanks" hidden>
+      <h3>Thank you for signing in</h3>
+      <p>Destin will follow up with anything you asked about. Enjoy the rest of the tour, and ask him any questions while you are here.</p>
+    </div>
+    <p class="url">Trouble signing in? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKmFAePgAKoei196BIKbv-pSdmxaJZY7h_qZETf9JIvDWO9w/viewform" target="_blank" rel="noopener">Use the form directly</a>.</p>
+    <img class="logo" src="img/real_white.png" alt="Real Broker, LLC" width="900" height="305">
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Information comes from the listing and is believed reliable but is not guaranteed. Buyers should verify measurements, features, taxes, utilities and school assignments. Listing agent and open house host: Destin Weakley, Real Broker, LLC. MLS #21326315 (NTREIS).</p>
+    <p>Photos courtesy of the listing.</p>
+  </div>
+</footer>
+
+<a class="jump" href="#signin">Sign in</a>
+
+<script>
+(function () {
+  var ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSfKmFAePgAKoei196BIKbv-pSdmxaJZY7h_qZETf9JIvDWO9w/formResponse";
+  var FIELDS = { name: "entry.1331150349", email: "entry.1430188617", phone: "entry.1692005896" };
+  var form = document.getElementById("signform");
+  var msg = document.getElementById("f-msg");
+  var btn = document.getElementById("f-submit");
+  var busy = false;
+  function bad(el, text) { el.setAttribute("aria-invalid", "true"); msg.textContent = text; el.focus(); }
+  [].forEach.call(form.querySelectorAll("input"), function (i) { i.addEventListener("input", function () { i.removeAttribute("aria-invalid"); msg.textContent = ""; }); });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (busy) return;
+    var n = document.getElementById("f-name"), m = document.getElementById("f-email"), p = document.getElementById("f-phone");
+    var name = n.value.trim(), email = m.value.trim(), phone = p.value.trim();
+    if (name.length < 2) return bad(n, "Please enter your full name.");
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) return bad(m, "Please enter a valid email address.");
+    if (phone.replace(/\D/g, "").length < 10) return bad(p, "Please enter a 10-digit phone number.");
+    busy = true; btn.disabled = true; btn.textContent = "Sending..."; msg.textContent = "";
+    var body = new URLSearchParams();
+    body.append(FIELDS.name, name); body.append(FIELDS.email, email); body.append(FIELDS.phone, phone);
+    fetch(ACTION, { method: "POST", mode: "no-cors", body: body })
+      .then(function () { form.hidden = true; document.getElementById("thanks").hidden = false; })
+      .catch(function () { busy = false; btn.disabled = false; btn.textContent = "Sign in"; msg.textContent = "Could not send. Check your connection and try again, or use the form link below."; });
+  });
+})();
+</script>
+</body>
+</html>
